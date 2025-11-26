@@ -6,12 +6,18 @@ import OrderConfirmationScreen from "../screens/OrderConfirmationScreen";
 import TrackOrderScreen from "../screens/TrackOrderScreen";
 import NotificationsScreen from "../screens/NotificationsScreen";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
+import ChatScreen from "../screens/ChatScreen";
 
 const Stack = createStackNavigator();
 
 export default function MainNavigation() {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="Chat">
+      <Stack.Screen
+        name="Chat"
+        component={ChatScreen}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Home"
         component={HomeTabs}
